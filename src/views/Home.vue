@@ -13,7 +13,7 @@
 					<img src="../assets//Wassilli Cover.jpg">
 					<div class="offset-1">
 						<h3>HISTORISCHER ROMAN</h3>
-						<h2>Hund Wassili und Petra die Kleine</h2>
+						<h2>Kater Wassili und Peter der Große</h2>
 						<button><router-link class="link" to="/Literatur">Mehr erfahren</router-link></button>
 					</div>
 				</div>
