@@ -14,7 +14,5 @@ npm run serve
 ### Compiles and minifies for production
 ```
 npm run build
+Site is served from \docs
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

@@ -67,10 +67,10 @@
                             </p>
                         </div>
                         <p class="available">
-                            Als Taschenbuch und als eBook erhältlich. Kann in
-                            allen Buchhandlungen bestellt werden.
+                            Das Buch ist als Taschenbuch und als E-book erhältlich und
+kann in allen Buchhandlungen und Online bestellt werden.
                         </p>
-                        <div class="row buttons">
+                        <!-- <div class="row buttons">
                             <div class="col">
                                 <button
                                     type="button"
@@ -91,7 +91,7 @@
 								</a>
                                 </button>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -167,8 +167,9 @@ h1 {
 }
 .available {
     margin-top: 15px;
-    color: grey;
-    font-size: 0.95rem;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 2rem;
 }
 p {
     color: #616161;

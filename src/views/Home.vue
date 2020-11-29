@@ -4,9 +4,9 @@
 			<div class="col-8 offset-2">
 				<h1>Gisela Debatin</h1>
 				<p>
-					Gisela Debatin liebt Katzen, Kunst und Literatur. Im Juli 2020 erschien
+					Gisela Debatin liebt Katzen, Kunst und Literatur. Im Juni 2020 erschien
 					im Verlag BoD ihr Buch "Kater Wassili und Peter der Große". Aus Sicht
-					eines Katers wird auf unterhaltsame Weise die Zeit Peters des Großen un
+					eines Katers wird auf unterhaltsame Weise die Zeit Peters des Großen und
 					die Entstehung der Stadt St. Petersburg beschrieben.
 				</p>
 				<div class="book">
@@ -23,7 +23,7 @@
 				</p>
 				<p>
 					Für die Schulbuchabteilung des Klett-Verlags Stuttgart arbeitete sie als
-					Autorin. Nach der Ezit im Schuldienst wandte sie sich (wieder) der Kunst
+					Autorin. Nach der Zeit im Schuldienst wandte sie sich der Kunst
 					zu. Es entstanden Gemälde auf Leinwand, Keramikfiguren und
 					Hinterglasbilder mit Motiven aus der Tierwelt.
 				</p>

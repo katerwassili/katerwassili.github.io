@@ -1,20 +1,5 @@
 <template>
   <div id="app">
-    <!-- <b-navbar type="light" variant="light">
-    <b-navbar-nav>
-      <b-nav-item><router-link to="/">Gisela Debatin</router-link></b-nav-item>
-
-      <b-nav-item-dropdown text="Literatur" right>
-        <b-dropdown-item><router-link to="/Literatur">Wassili und Peter der Große</router-link></b-dropdown-item>
-      </b-nav-item-dropdown>
-
-      <b-nav-item-dropdown text="Kunst" right>
-        <b-dropdown-item><router-link to="/Kunst#Ölbilder">Ölbilder</router-link></b-dropdown-item>
-        <b-dropdown-item><router-link to="/Kunst#Keramiken">Keramiken</router-link></b-dropdown-item>
-		<b-dropdown-item><router-link to="/Kunst#Hinterglasbilder">Hinterglasbilder</router-link></b-dropdown-item>
-      </b-nav-item-dropdown>
-    </b-navbar-nav>
-  </b-navbar> -->
   <div class="vertical-nav" id="sidebar">
   <div class="py-4 px-3 mb-4 head">
     <div class="media d-flex align-items-center">
@@ -32,9 +17,6 @@
 
   <ul class="nav flex-column mb-0">
     <li class="nav-item">
-      <!-- <a href="#" class="nav-link text-dark bg-light">
-                Kater Wassili und Peter der Große
-    	</a> -->
     </li>
 	<li class="nav-item">
 		<router-link to="/Literatur" class= nav-link text-dark>Kater Wassili und Peter der Große</router-link>
@@ -42,7 +24,7 @@
   </ul>
 
   <p class="text-gray font-weight-bold text-uppercase px-3 small py-4 mb-0">
-	  <router-link to="/Kunst" class="link nav-header">Kunst</router-link>
+	  <router-link to="/Kunst" class="link nav-header"><div class="nav-header-item">Kunst</div></router-link>
 	  </p>
 
   <ul class="nav flex-column mb-0">
@@ -184,4 +166,7 @@ button:hover > a {
 	color: #ffffff !important;
 }
 
+.nav-header-item {
+	// height: 100px;
+}
 </style>

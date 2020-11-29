@@ -21,7 +21,7 @@
 
 		<div class="ausstellungen" id="ausstellungen">
 			<h1>
-				Vergangene Ausstellungen
+				Ausstellungen
 			</h1>
 			<ul class="austellungen-liste">
 				<li>Parktheater Bensheim</li>
@@ -68,13 +68,13 @@ export default {
 						},
 						{
 							src : require('../assets/Eichhörnchen.jpg'),
-							description : 'Text 3',
-							size : '0 cm'
+							description : 'Eichhörnchen besuchen Pompeji',
+							size : '70 x70 cm'
 						},
 						{
 							src : require('../assets/Katze.jpg'),
-							description : 'Text 4',
-							size : '0 cm'
+							description : 'Ein Sommertag mit Katze',
+							size : '70 x 70 cm'
 						}
 					]
 				},
