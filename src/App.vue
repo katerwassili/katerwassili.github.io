@@ -1,53 +1,61 @@
 <template>
-  <div id="app">
-  <div class="vertical-nav" id="sidebar">
-  <div class="py-4 px-3 mb-4 head">
-    <div class="media d-flex align-items-center">
-		<!-- <img src="./assets/Wassili favicon.png" alt="..." width="65" class="mr-3 rounded-circle img-thumbnail shadow-sm"> -->
-      <div class="media-body">
-        <router-link to="/" class="link"><h4 class="m-0 title">Gisela Debatin</h4></router-link>
-		<p class="font-weight-light text-muted mb-0">Kunst und Literatur</p>
-      </div>
-    </div>
-  </div>
+	<div id="app">
+		<div class="vertical-nav" id="sidebar">
+			<div class="header">
+    			<div class="media">
+					<!-- <img src="./assets/Wassili favicon.png" alt="..." width="65" class="mr-3 rounded-circle img-thumbnail shadow-sm"> -->
+      				<div class="media-body">
+        				<router-link to="/" class="link"><h4 class="title">Gisela Debatin</h4></router-link>
+						<p class="media-subtitle">Kunst und Literatur</p>
+      				</div>
+    			</div>
+  			</div>
 
-  <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">
-	  <router-link to="/Literatur" class="link nav-header">Literatur</router-link>
-	</p>
+			<p class="nav-header">
+				<router-link to="/Literatur" class="link">
+					<div class="nav-header-item text-uppercase">Literatur</div>
+				</router-link>
+			</p>
 
-  <ul class="nav flex-column mb-0">
-    <li class="nav-item">
-    </li>
-	<li class="nav-item">
-		<router-link to="/Literatur" class= nav-link text-dark>Kater Wassili und Peter der Große</router-link>
-    </li>
-  </ul>
+			<ul class="nav">
+				<li class="nav-item">
+					<router-link to="/Literatur" class="nav-link">Kater Wassili und Peter der Große</router-link>
+				</li>
+			</ul>
 
-  <p class="text-gray font-weight-bold text-uppercase px-3 small py-4 mb-0">
-	  <router-link to="/Kunst" class="link nav-header"><div class="nav-header-item">Kunst</div></router-link>
-	  </p>
+			<p class="nav-header">
+				<router-link to="/Kunst" class="link">
+					<div class="nav-header-item text-uppercase">Kunst</div>
+				</router-link>
+			</p>
 
-  <ul class="nav flex-column mb-0">
-    <li class="nav-item">
-		<router-link to="/Kunst" v-scroll-to="'#oil'" class= nav-link text-dark>Ölbilder</router-link>
-    </li>
-    <li class="nav-item">
-		<router-link to="/Kunst" v-scroll-to="'#keramik'" class= nav-link text-dark>Keramiken</router-link>
-    </li>
-    <li class="nav-item">
-		<router-link to="/Kunst" v-scroll-to="'#glas'" class= nav-link text-dark>Hinterglasbilder</router-link>
-    </li>
-  </ul>
+			<ul class="nav">
+				<li class="nav-item">
+					<router-link to="/Kunst" v-scroll-to="'#oil'" class="nav-link">Ölbilder</router-link>
+				</li>
+				<li class="nav-item">
+					<router-link to="/Kunst" v-scroll-to="'#keramik'" class="nav-link">Keramiken</router-link>
+				</li>
+				<li class="nav-item">
+					<router-link to="/Kunst" v-scroll-to="'#glas'" class="nav-link">Hinterglasbilder</router-link>
+				</li>
+			</ul>
 
-  <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0 bottom-item">
-	  <router-link to="/Kontakt" class="link nav-header">Kontakt und Impressum</router-link>
-	</p>
-</div>
-	<div class="page-content" id="content">
-    <router-view />
+			<p class="nav-header bottom-item">
+				<router-link to="/Kontakt" class="link">
+					<div class="nav-header-item text-uppercase">Kontakt und Impressum</div>
+				</router-link>
+			</p>
 
+			<!-- <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0 ">
+				<router-link to="/" class="link nav-header"></router-link>
+			</p> -->
+		</div>
+
+		<div class="page-content" id="content">
+    		<router-view />
+		</div>
 	</div>
-  </div>
 </template>
 
 <style lang="scss">
@@ -97,7 +105,11 @@
     width: calc(100% - 17rem);
   }
 }
-
+.nav {
+	margin-bottom: 0px;
+	display: flex;
+	flex-direction: column;
+}
 .nav-link, .link {
 	color: #343a40;
 }
@@ -121,11 +133,26 @@
 	background-color: #EEEEEE;
 }
 .nav-header {
-	font-weight: 800;
-	color: #757575;
+	// px-3 small py-4 mb-0
+	padding: 1.5rem 1rem 1.5rem 1rem;
+	margin-bottom: 0px;
 }
-.head {
+.nav-header-item {
+	font-weight: 800;
+	font-size: 80%;
+}
+.header {
 	background-color: #EEEEEE;
+	padding: 1.5rem 1rem 1.5rem 1rem;
+}
+.media {
+	display: flex;
+	align-items: center;
+}
+.media-subtitle {
+	font-weight: 300;
+	margin-bottom: 0px;
+	color: #6c757d
 }
 // General Styling
 
@@ -166,7 +193,4 @@ button:hover > a {
 	color: #ffffff !important;
 }
 
-.nav-header-item {
-	// height: 100px;
-}
 </style>
