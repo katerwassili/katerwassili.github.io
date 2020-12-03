@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import BootstrapVue from 'bootstrap-vue'
+import { BootstrapVue } from 'bootstrap-vue'
 import VueScrollTo from 'vue-scrollto'
+import Scrollspy from 'vue2-scrollspy';
 import Home from '../views/Home.vue'
 import Kunst from '../views/Kunst.vue'
 import Literatur from '../views/Literatur.vue'
@@ -9,6 +10,8 @@ import Kontakt from '../views/Kontakt.vue'
 import Bild from '../views/Bild.vue'
 
 Vue.use(VueRouter)
+Vue.use(VueScrollTo)
+Vue.use(Scrollspy)
 Vue.use(BootstrapVue)
 
 import 'bootstrap/dist/css/bootstrap.css'

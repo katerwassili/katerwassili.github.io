@@ -2,61 +2,85 @@
 	<div id="app">
 		<div class="vertical-nav" id="sidebar">
 			<div class="header">
-    			<div class="media">
+				<div class="media">
 					<!-- <img src="./assets/Wassili favicon.png" alt="..." width="65" class="mr-3 rounded-circle img-thumbnail shadow-sm"> -->
-      				<div class="media-body">
-        				<router-link to="/" class="link"><h4 class="title">Gisela Debatin</h4></router-link>
+					<div class="media-body">
+						<router-link to="/" class="link"><h4 class="title">Gisela Debatin</h4></router-link>
 						<p class="media-subtitle">Kunst und Literatur</p>
-      				</div>
-    			</div>
-  			</div>
+					</div>
+				</div>
+			</div>
 
-			<p class="nav-header">
+			<p class="nav-header" v-on:click="closeNav()">
 				<router-link to="/Literatur" class="link">
 					<div class="nav-header-item text-uppercase">Literatur</div>
 				</router-link>
 			</p>
 
 			<ul class="nav">
-				<li class="nav-item">
+				<li class="nav-item" v-on:click="closeNav()">
 					<router-link to="/Literatur" class="nav-link">Kater Wassili und Peter der Große</router-link>
 				</li>
 			</ul>
 
-			<p class="nav-header">
+			<p class="nav-header" v-on:click="closeNav()">
 				<router-link to="/Kunst" class="link">
 					<div class="nav-header-item text-uppercase">Kunst</div>
 				</router-link>
 			</p>
 
-			<ul class="nav">
-				<li class="nav-item">
+			<ul class="nav" v-scroll-spy-active v-scroll-spy-link>
+				<li class="nav-item" v-on:click="closeNav()">
 					<router-link to="/Kunst" v-scroll-to="'#oil'" class="nav-link">Ölbilder</router-link>
 				</li>
-				<li class="nav-item">
+				<li class="nav-item" v-on:click="closeNav()">
 					<router-link to="/Kunst" v-scroll-to="'#keramik'" class="nav-link">Keramiken</router-link>
 				</li>
-				<li class="nav-item">
+				<li class="nav-item" v-on:click="closeNav()">
 					<router-link to="/Kunst" v-scroll-to="'#glas'" class="nav-link">Hinterglasbilder</router-link>
 				</li>
 			</ul>
 
-			<p class="nav-header bottom-item">
+			<p class="nav-header bottom-item" v-on:click="closeNav()">
 				<router-link to="/Kontakt" class="link">
-					<div class="nav-header-item text-uppercase">Kontakt und Impressum</div>
+					<div class="nav-header-item text-uppercase">Kontakt</div>
 				</router-link>
 			</p>
-
-			<!-- <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0 ">
-				<router-link to="/" class="link nav-header"></router-link>
-			</p> -->
 		</div>
 
 		<div class="page-content" id="content">
+			<div class="hamburger" v-on:click="toggleNav()">
+				<img id="menu" src="./assets//hamburger.svg" alt="Menu">
+				<img id="close" class="d-none" src="./assets//close.svg" alt="Menu">
+			</div>
     		<router-view />
 		</div>
 	</div>
 </template>
+
+<script>
+export default {
+	methods: {
+		toggleNav : function() {
+			var sidebar = document.getElementById('sidebar');
+			var menu = document.getElementById('menu');
+			var close = document.getElementById('close');
+			sidebar.classList.toggle('active-nav');
+			menu.classList.toggle('d-none');
+			close.classList.toggle('d-none');
+		},
+		closeNav: function() {
+			var sidebar = document.getElementById('sidebar');
+			var menu = document.getElementById('menu');
+			var close = document.getElementById('close');
+			sidebar.classList.remove('active-nav');
+			menu.classList.remove('d-none');
+			close.classList.add('d-none');
+			console.log("hi");
+		}
+	},
+}
+</script>
 
 <style lang="scss">
 
@@ -70,6 +94,7 @@
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.4s;
   background-color: #f8f8f8;
+  z-index: 2;
 }
 
 .page-content {
@@ -80,11 +105,11 @@
 
 /* for toggle behavior */
 
-#sidebar.active {
-  margin-left: -17rem;
+#sidebar.active-nav {
+  margin-left: 0px;
 }
 
-#content.active {
+#content.active-nav {
   width: 100%;
   margin: 0;
 }
@@ -92,9 +117,6 @@
 @media (max-width: 768px) {
   #sidebar {
     margin-left: -17rem;
-  }
-  #sidebar.active {
-    margin-left: 0;
   }
   #content {
     width: 100%;
@@ -104,6 +126,29 @@
     margin-left: 17rem;
     width: calc(100% - 17rem);
   }
+}
+
+@media (max-width: 991px) {
+	#content {
+		width: 100%;
+		margin: 0;
+	}
+	#sidebar {
+    margin-left: -17rem;
+  }
+}
+@media (max-width: 576px) {
+	#sidebar {
+		width: 100vw;
+	}
+	#sidebar {
+    	margin-left: -100vw;
+	}
+}
+@media (min-width: 991px) {
+	.hamburger {
+		display: none;
+	}
 }
 .nav {
 	margin-bottom: 0px;
@@ -133,13 +178,17 @@
 	background-color: #EEEEEE;
 }
 .nav-header {
-	// px-3 small py-4 mb-0
-	padding: 1.5rem 1rem 1.5rem 1rem;
+	padding: 0.5rem 0px;
 	margin-bottom: 0px;
+	width:100%;
 }
 .nav-header-item {
 	font-weight: 800;
 	font-size: 80%;
+	padding: 1rem 1rem;
+}
+.nav-header-item:hover {
+	background-color: #EEEEEE;	
 }
 .header {
 	background-color: #EEEEEE;
@@ -153,6 +202,27 @@
 	font-weight: 300;
 	margin-bottom: 0px;
 	color: #6c757d
+}
+.active {
+	// background-color: #EEEEEE;
+}
+
+.hamburger {
+	position: fixed;
+	z-index: 3;
+	height: 1.5rem;
+	width: 1.5rem;
+	top: 0px;
+	right: 0px;
+	margin: 24px;
+}
+.hamburger > img {
+	height: 100%;
+	width: 100%;
+}
+
+.navbar-toggler-icon {
+	color: black;
 }
 // General Styling
 

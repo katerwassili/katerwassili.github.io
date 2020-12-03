@@ -1,15 +1,10 @@
 <template>
 <div class="container">
-    <div class="col-8 offset-2">
-        <div>
-            <h1>Impressum</h1>
-            Adresse
-        </div>
+    <div class="col-md-8 offset-md-2 col-10 offset-1">
         <div>
             <h1>Kontakt</h1>
             <p>Gisela Debatin</p>
             <p>mooreule@arcor.de</p>
-            <p>Telefon: 000000000</p>
         </div>
     </div>
 </div>

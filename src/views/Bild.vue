@@ -1,5 +1,5 @@
 <template>
-  <div class="bild">
+  <div class="bild col-10 offset-1">
         <div class="content">
             <div class="image">
                 <img class="img" :src="src">
@@ -46,5 +46,11 @@ export default {
 .size {
     color: gray;
     font-size: 1rem;
+}
+@media (max-width: 576px) {
+	.img {
+        width: 100%;
+        height: auto;
+    }
 }
 </style>

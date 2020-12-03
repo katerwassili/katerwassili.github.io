@@ -1,33 +1,33 @@
 <template>
 	<div class="home">
-		<div class="container">
-			<div class="col-8 offset-2">
-				<h1>Gisela Debatin</h1>
-				<p>
-					Gisela Debatin liebt Katzen, Kunst und Literatur. Im Juni 2020 erschien
-					im Verlag BoD ihr Buch "Kater Wassili und Peter der Große". Aus Sicht
-					eines Katers wird auf unterhaltsame Weise die Zeit Peters des Großen und
-					die Entstehung der Stadt St. Petersburg beschrieben.
-				</p>
-				<div class="book">
+		<div class="col-10 offset-1 col-xl-8 offset-xl-2">
+			<h1>Gisela Debatin</h1>
+			<p>
+				Gisela Debatin liebt Katzen, Kunst und Literatur. Im Juni 2020 erschien
+				im Verlag BoD ihr Buch "Kater Wassili und Peter der Große". Aus Sicht
+				eines Katers wird auf unterhaltsame Weise die Zeit Peters des Großen und
+				die Entstehung der Stadt St. Petersburg beschrieben.
+			</p>
+			<div class="book">
+				<div class="img-container">
 					<img src="../assets//Wassilli Cover.jpg">
-					<div class="offset-1">
-						<h3>HISTORISCHER ROMAN</h3>
-						<h2>Kater Wassili und Peter der Große</h2>
-						<button><router-link class="link" to="/Literatur">Mehr erfahren</router-link></button>
-					</div>
 				</div>
-				<p>
-					Nach dem Studium für das Lehramt in Stuttgart unterrichtete Gisela
-					Debatin an verschiedenen Schulen in Baden-Württemberg und Hessen.
-				</p>
-				<p>
-					Für die Schulbuchabteilung des Klett-Verlags Stuttgart arbeitete sie als
-					Autorin. Nach der Zeit im Schuldienst wandte sie sich der Kunst
-					zu. Es entstanden Gemälde auf Leinwand, Keramikfiguren und
-					Hinterglasbilder mit Motiven aus der Tierwelt.
-				</p>
+				<div class="offset-sm-1 book-summary">
+					<h3>HISTORISCHER ROMAN</h3>
+					<h2>Kater Wassili und Peter der Große</h2>
+					<button><router-link class="link" to="/Literatur">Mehr erfahren</router-link></button>
+				</div>
 			</div>
+			<p>
+				Nach dem Studium für das Lehramt in Stuttgart unterrichtete Gisela
+				Debatin an verschiedenen Schulen in Baden-Württemberg und Hessen.
+			</p>
+			<p>
+				Für die Schulbuchabteilung des Klett-Verlags Stuttgart arbeitete sie als
+				Autorin. Nach der Zeit im Schuldienst wandte sie sich der Kunst
+				zu. Es entstanden Gemälde auf Leinwand, Keramikfiguren und
+				Hinterglasbilder mit Motiven aus der Tierwelt.
+			</p>
 		</div>
 	</div>
 </template>
@@ -39,7 +39,7 @@ export default {
 </script>
 
 <style scoped>
-.container {
+.home {
 	margin-top: 3rem;	
 }
 h1 {
@@ -62,7 +62,7 @@ img {
 	margin-bottom: 3rem;
 }
 
-.book > div {
+.book-summary {
 	padding: 20px;
 }
 
@@ -85,7 +85,29 @@ h3 {
 	color: white !important;
 }
 img {
+	box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.6);
+}
 
-box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.6);
+@media (max-width: 1200px) {
+	button {
+		width: 100%;
+	}
+}
+@media (max-width: 576px) {
+	.book {
+		flex-direction: column;
+	}
+	img {
+		width: 80%;
+		height: auto;
+	}
+	.img-container {
+		display: flex;
+		justify-content: center;
+	}
+	.book-summary {
+		text-align: center;
+		margin-top: 1rem;
+	}
 }
 </style>

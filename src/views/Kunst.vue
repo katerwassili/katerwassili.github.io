@@ -1,5 +1,5 @@
 <template>
-  <div class="kunst col-8 offset-2">
+  <div class="kunst col-sm-8 offset-sm-2 col-10 offset-1" v-scroll-spy>
 		<div class="gallery" v-for="elem in this.art" v-bind:key='elem.title'>
 			<div class="container" :id="elem.id">
 				<h1>{{elem.title}}</h1>
@@ -168,6 +168,7 @@ img {
 
 ul {
 	list-style-type: none;
+	padding: 0px;
 }
 li {
 	padding-bottom: 3px;
