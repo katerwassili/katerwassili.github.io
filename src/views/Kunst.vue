@@ -39,7 +39,7 @@
 				<li>Atelier-Galerie Tourette-sur-Loup (Alpes-Maritimes), Frankreich</li>
 				<li>Galerie Hell, München</li>
 			</ul>
-			Spendausstellungen zugunsten <i>Bund der Katzenfreunde, München</i> und <i>Pro Animale, Schweinfurt</i>
+			Spendenausstellungen zugunsten <i>Bund der Katzenfreunde, München</i> und <i>Pro Animale, Schweinfurt</i>
 		</div>
   </div>
 

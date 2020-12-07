@@ -72,8 +72,8 @@
                         </p>
                     </div>
                     <p class="available">
-                        Das Buch ist als Taschenbuch und als E-book erhältlich und
-                        kann in allen Buchhandlungen und Online bestellt werden.
+                        Das Buch ist als Taschenbuch und als E-Book erhältlich und
+                        kann in allen Buchhandlungen und online bestellt werden.
                     </p>
                 </div>
             </div>

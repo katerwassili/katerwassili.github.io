@@ -4,9 +4,11 @@
 			<div class="header">
 				<div class="media">
 					<!-- <img src="./assets/Wassili favicon.png" alt="..." width="65" class="mr-3 rounded-circle img-thumbnail shadow-sm"> -->
-					<div class="media-body">
-						<router-link to="/" class="link"><h4 class="title">Gisela Debatin</h4></router-link>
-						<p class="media-subtitle">Kunst und Literatur</p>
+					<div class="media-body" v-on:click="closeNav()">
+						<router-link to="/" class="link">
+							<h4 class="title">Gisela Debatin</h4>
+							<p class="media-subtitle">Kunst und Literatur</p>
+						</router-link>
 					</div>
 				</div>
 			</div>
@@ -38,6 +40,9 @@
 				</li>
 				<li class="nav-item" v-on:click="closeNav()">
 					<router-link to="/Kunst" v-scroll-to="'#glas'" class="nav-link">Hinterglasbilder</router-link>
+				</li>
+				<li class="nav-item" v-on:click="closeNav()">
+					<router-link to="/Kunst" v-scroll-to="'#ausstellungen'" class="nav-link">Ausstellungen</router-link>
 				</li>
 			</ul>
 
@@ -76,7 +81,6 @@ export default {
 			sidebar.classList.remove('active-nav');
 			menu.classList.remove('d-none');
 			close.classList.add('d-none');
-			console.log("hi");
 		}
 	},
 }
