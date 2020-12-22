@@ -207,10 +207,6 @@ export default {
 	margin-bottom: 0px;
 	color: #6c757d
 }
-.active {
-	// background-color: #EEEEEE;
-}
-
 .hamburger {
 	position: fixed;
 	z-index: 3;
@@ -221,8 +217,10 @@ export default {
 	margin: 24px;
 }
 .hamburger > img {
+	position: relative;
 	height: 100%;
 	width: 100%;
+	z-index: 4;
 }
 
 .navbar-toggler-icon {
@@ -243,28 +241,28 @@ p,li {
 button {
     width: 100%;
     margin: 0px 5px;
-    font-weight: 600;
-    color: #494949 !important;
+    font-weight: 500;
+    color: white !important;
     border-radius: 0px;
     text-transform: uppercase;
     text-decoration: none;
-    background: #ffffff;
+	background: #4b6a89;
     padding: 15px;
-    border: 3px solid #494949 !important;
+    border: 0px;
     display: inline-block;
-    transition: all 0.4s ease 0s;
-}
-button:hover {
-    color: #ffffff !important;
-    background: #212121;
-    border-color: #212121 !important;
-    transition: all 0.4s ease 0s;
+	border-radius: 2px;
 }
 button > a:hover {
 	color: #ffffff !important;
 }
 button:hover > a {
 	color: #ffffff !important;
+}
+button > .link {
+	color: white;
+}
+button:focus {
+	outline: 0px !important;
 }
 
 </style>

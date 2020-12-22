@@ -75,6 +75,14 @@
                         Das Buch ist als Taschenbuch und als E-Book erhältlich und
                         kann in allen Buchhandlungen und online bestellt werden.
                     </p>
+                    <div class="buttons">
+                        <div class="button-container">
+                            <a href="https://www.bod.de/buchshop/kater-wassili-und-peter-der-grosse-gisela-debatin-9783751951425" target="_blank" rel="noopener noreferrer" class="link"><button>Beim Verlag BoD kaufen</button></a>
+                        </div>
+                        <div class="button-container">
+                            <a href="https://www.amazon.de/dp/B08CW88YF8/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1" target="_blank" rel="noopener noreferrer" class="link"><button>Bei Amazon kaufen</button></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -113,28 +121,14 @@ p {
     color: #343a40;
     font-size: 0.9rem;
 }
-button {
-    width: 100%;
-    margin: 0px 5px;
-    font-weight: 600;
-    color: #494949 !important;
-    border-radius: 0px;
-    text-transform: uppercase;
-    text-decoration: none;
-    background: #ffffff;
-    padding: 15px;
-    border: 3px solid #494949 !important;
-    display: inline-block;
-    transition: all 0.4s ease 0s;
-}
-button:hover {
-    color: #ffffff !important;
-    background: #212121;
-    border-color: #212121 !important;
-    transition: all 0.4s ease 0s;
-}
 .buttons {
     margin-bottom: 3rem;
+    display: flex;
+    flex-direction: row;
+}
+.button-container {
+    width: 50%;
+    padding: 0rem 1rem 1rem 1rem;
 }
 .left-side {
     height: 100vh;
@@ -196,6 +190,12 @@ p {
     .cover > img {
         width: 100%;
         height: auto;
+    }
+    .buttons {
+        flex-direction: column;
+    }
+    .button-container {
+        width: 100%;
     }
 }
 
