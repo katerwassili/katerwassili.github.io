@@ -3,7 +3,7 @@
 		<div class="col-10 offset-1 col-xl-8 offset-xl-2">
 			<h1>Gisela Debatin</h1>
 			<p>
-				Gisela Debatin liebt Katzen, Kunst und Literatur. Im Juni 2020 erschien
+				Gisela Debatin liebte Katzen, Kunst und Literatur. Im Juni 2020 erschien
 				im Verlag BoD ihr Buch "Kater Wassili und Peter der Große". Aus Sicht
 				eines Katers wird auf unterhaltsame Weise die Zeit Peters des Großen und
 				die Entstehung der Stadt St. Petersburg beschrieben.
@@ -27,6 +27,9 @@
 				Autorin. Nach der Zeit im Schuldienst wandte sie sich der Kunst
 				zu. Es entstanden Gemälde auf Leinwand, Keramikfiguren und
 				Hinterglasbilder mit Motiven aus der Tierwelt.
+			</p>
+			<p>
+				Gisela Debatin ist am 7. Juni 2026 in München verstorben.
 			</p>
 		</div>
 	</div>
