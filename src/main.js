@@ -1,16 +1,12 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import VueScrollTo from 'vue-scrollto'
-import { BootstrapVue } from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
 
-Vue.use(VueScrollTo)
-Vue.use(BootstrapVue)
+const app = createApp(App)
 
+app.use(router)
+app.use(VueScrollTo)
 
-Vue.config.productionTip = false
-
-new Vue({
-  router,
-  render: function (h) { return h(App) }
-}).$mount('#app')
+app.mount('#app')

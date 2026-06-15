@@ -1,18 +1,23 @@
-# Giselas Website
+# Gisela Debatin Website
 
+Vue 3 site for the author and artist Gisela Debatin.
 
-## Project setup
-```
+## Setup
+
+```bash
 npm install
 ```
 
-### Compiles and hot-reloads for development
-```
+## Development
+
+```bash
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
+## Production Build
+
+```bash
 npm run build
-Site is served from \docs
 ```
+
+The production build is written to `docs/`, which is used for GitHub Pages deployment.

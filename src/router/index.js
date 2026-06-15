@@ -1,21 +1,9 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import { BootstrapVue } from 'bootstrap-vue'
-import VueScrollTo from 'vue-scrollto'
-import Scrollspy from 'vue2-scrollspy';
+import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Kunst from '../views/Kunst.vue'
 import Literatur from '../views/Literatur.vue'
 import Kontakt from '../views/Kontakt.vue'
 import Bild from '../views/Bild.vue'
-
-Vue.use(VueRouter)
-Vue.use(VueScrollTo)
-Vue.use(Scrollspy)
-Vue.use(BootstrapVue)
-
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 const routes = [
   {
@@ -46,8 +34,23 @@ const routes = [
   }
 ]
 
-const router = new VueRouter({
-  routes
+const router = createRouter({
+  history: createWebHashHistory(),
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    }
+
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth'
+      }
+    }
+
+    return { top: 0 }
+  }
 })
 
 export default router

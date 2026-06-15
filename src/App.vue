@@ -31,7 +31,7 @@
 				</router-link>
 			</p>
 
-			<ul class="nav" v-scroll-spy-active v-scroll-spy-link>
+			<ul class="nav">
 				<li class="nav-item" v-on:click="closeNav()">
 					<router-link to="/Kunst" v-scroll-to="'#oil'" class="nav-link">Ölbilder</router-link>
 				</li>
@@ -67,17 +67,17 @@
 export default {
 	methods: {
 		toggleNav : function() {
-			var sidebar = document.getElementById('sidebar');
-			var menu = document.getElementById('menu');
-			var close = document.getElementById('close');
+			const sidebar = document.getElementById('sidebar');
+			const menu = document.getElementById('menu');
+			const close = document.getElementById('close');
 			sidebar.classList.toggle('active-nav');
 			menu.classList.toggle('d-none');
 			close.classList.toggle('d-none');
 		},
 		closeNav: function() {
-			var sidebar = document.getElementById('sidebar');
-			var menu = document.getElementById('menu');
-			var close = document.getElementById('close');
+			const sidebar = document.getElementById('sidebar');
+			const menu = document.getElementById('menu');
+			const close = document.getElementById('close');
 			sidebar.classList.remove('active-nav');
 			menu.classList.remove('d-none');
 			close.classList.add('d-none');
